@@ -12,6 +12,8 @@ const connectToMongo = () => {
     })
     .then(() => {
       console.log("successfully db connected");
+      console.log(mongoURI);
+      
     })
     .catch((err) => {
       console.log(err);

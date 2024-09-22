@@ -3,14 +3,12 @@ const { Schema } = mongoose;
 
 const requestSchema = new Schema(
   {
-    lname: { type: String, required: true },
-    service: { type: String, required: true },
     name: { type: String, required: true },
+    address: { type: String, required: true },
 
-    // buy_price: { type: Number, required: true },
     mobilenumber: { type: Number, required: true },
     email: { type: String },
-    problemstatement: { type: String },
+    message: { type: String },
   },
   { timestamps: true }
 );
