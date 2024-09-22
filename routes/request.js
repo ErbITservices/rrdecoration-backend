@@ -12,12 +12,12 @@ requestRouter.post("/",  async (req, res) => {
     const id = mongoose.Types.ObjectId()
     console.log(id)
     console.log('data',req.body);
-    console.log('libraray',req.body.library);
+    console.log('libraray',req.body.user);
 
     try {
     
       
-      const savedProduct = await Request.create({...req.body.library, _id: id})
+      const savedProduct = await Request.create({...req.body.user, _id: id})
       res.status(200).json(savedProduct);
     } catch (err) {
       if (err.name === "ValidationError") {
